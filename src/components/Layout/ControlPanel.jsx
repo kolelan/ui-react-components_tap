@@ -36,6 +36,17 @@ const ControlPanel = ({ onSettingsChange, settings }) => {
             </div>
 
             <div className={styles.controlGroup}>
+                <label>
+                    <input
+                        type="checkbox"
+                        checked={localSettings.showShape !== false}
+                        onChange={(e) => handleChange('showShape', e.target.checked)}
+                    />
+                    Показывать фигуру
+                </label>
+            </div>
+
+            <div className={styles.controlGroup}>
                 <label>Форма:</label>
                 <select
                     value={localSettings.shape}

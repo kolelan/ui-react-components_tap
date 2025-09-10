@@ -18,7 +18,8 @@ function App() {
     fontSize: 16,
     offsetX: 0,
     offsetY: 0,
-    borderEnabled: true
+    borderEnabled: true,
+    showShape: true
   });
 
   const handleSettingsChange = (newSettings) => {

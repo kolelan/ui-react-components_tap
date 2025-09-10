@@ -39,3 +39,15 @@
     font-weight: bold;
     user-select: none;
 }
+.contentOnly {
+    background-color: transparent !important;
+    border: none !important;
+    width: auto !important;
+    height: auto !important;
+    display: inline-block;
+}
+
+.contentOnly .content {
+    transform: none !important;
+    position: static !important;
+}

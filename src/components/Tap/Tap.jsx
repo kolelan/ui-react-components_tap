@@ -15,17 +15,18 @@ const Tap = ({
                  offsetX = 0,
                  offsetY = 0,
                  borderEnabled = true,
+                 showShape = true, // Новый параметр для отображения фигуры
                  className = ''
              }) => {
     const containerStyle = {
-        width: `${size}px`,
-        height: `${size}px`,
-        backgroundColor: bgColor,
+        width: showShape ? `${size}px` : 'auto',
+        height: showShape ? `${size}px` : 'auto',
+        backgroundColor: showShape ? bgColor : 'transparent',
         opacity: bgOpacity
     };
 
-    // Добавляем обводку только если она включена
-    if (borderEnabled && borderSize > 0) {
+    // Добавляем обводку только если она включена и фигура отображается
+    if (showShape && borderEnabled && borderSize > 0) {
         containerStyle.border = `${borderSize}px solid ${borderColor}`;
     }
 
@@ -37,6 +38,8 @@ const Tap = ({
     };
 
     const getShapeClass = () => {
+        if (!showShape) return styles.contentOnly;
+
         switch (shape) {
             case 'circle': return styles.circle;
             case 'square': return styles.square;
