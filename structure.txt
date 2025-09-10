@@ -1,0 +1,20 @@
+tap-test-project/
+├── public/
+│   ├── index.html
+│   └── favicon.ico
+├── src/
+│   ├── components/
+│   │   ├── Tap/
+│   │   │   ├── Tap.jsx
+│   │   │   ├── Tap.module.css
+│   │   │   └── index.js
+│   │   └── Layout/
+│   │       ├── Header.jsx
+│   │       ├── ControlPanel.jsx
+│   │       └── index.js
+│   ├── App.js
+│   ├── App.module.css
+│   ├── index.js
+│   └── index.css
+├── package.json
+└── README.md
